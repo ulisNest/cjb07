@@ -1,0 +1,23 @@
+<script>
+  import Header from "./lib/Header.svelte";
+  import Body from "./lib/Body.svelte";
+  import PannelloComandi from "./lib/PannelloComandi.svelte";
+  import LogWindow from "./lib/LogWindow.svelte";
+  import Bottone from "./lib/Bottone.svelte";
+</script>
+
+<main>
+  <Header />
+  <Body>
+    <LogWindow />
+    <PannelloComandi>
+      <Bottone titolo="Start" />
+      <Bottone titolo="Stop" />
+      <Bottone titolo="Restart" />
+      <Bottone titolo="Kill" />
+    </PannelloComandi>
+  </Body>
+</main>
+
+<style>
+</style>
