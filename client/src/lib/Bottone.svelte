@@ -1,9 +1,26 @@
 <script>
     export let titolo;
+    export let actionType;
+    const ACTIONS = {
+        'start': 'pannello-start',
+        'stop': 'pannello-stop',
+        'kill':'pannello-kill',
+        'restart':'pannello-restart'
+    }
+
+    function makeRequest(mouseEvent) {
+        fetch(`localhost:3000/${ACTIONS[actionType]}`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(),
+        })
+        .then((response) => response.json())
+        .then((data) => console.log("BOTTONE-MS: ",data.msg));
+    }
 
 </script>
 
-<button class="bottonePannello">
+<button class="bottonePannello" on:click="{makeRequest}">
     {titolo}
 </button>
 

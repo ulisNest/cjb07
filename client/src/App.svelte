@@ -11,10 +11,10 @@
   <Body>
     <LogWindow />
     <PannelloComandi>
-      <Bottone titolo="Start" />
-      <Bottone titolo="Stop" />
-      <Bottone titolo="Restart" />
-      <Bottone titolo="Kill" />
+      <Bottone titolo="Start" actionType="start"/>
+      <Bottone titolo="Stop" actionType="stop"/>
+      <Bottone titolo="Restart" actionType="restart"/>
+      <Bottone titolo="Kill" actionType="kill"/>
     </PannelloComandi>
   </Body>
 </main>

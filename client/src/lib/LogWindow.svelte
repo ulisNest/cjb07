@@ -2,12 +2,13 @@
   // your script goes here
   import { io } from 'socket.io-client';
   const socket = io();
-  
+
   let receivedMessages = [];
   socket.on('logMsg', (data) => {
     console.log("added msg");
     console.log("lista: ", receivedMessages);
-    receivedMessages = [...receivedMessages, data.msg];
+    receivedMessages.push(data.msg);
+    receivedMessages = receivedMessages;
   });
 
 </script>
